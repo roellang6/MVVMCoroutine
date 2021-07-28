@@ -1,0 +1,3 @@
+rootProject.name = "Ganhe dinheiro em casa"
+include ':app'
+include ':ganheyqc'
