@@ -140,7 +140,7 @@ class GanheViewModel : ViewModel() {
     fun funEarnBp(): MutableLiveData<List<ApiModel>> {
         ganheBackuplist.clear()
         viewModelScope.launch(exeEb + Dispatchers.IO) {
-            val response = apidataServices.mainGanhe()
+            val response = apidataServices.backupGanhe()
             for (datam in response.body()!!) {
                 if (datam.status == "make money Portuguese") {
                     ganheBackuplist.add(datam)
@@ -158,7 +158,7 @@ class GanheViewModel : ViewModel() {
     fun funAdvanceBp(): MutableLiveData<List<ApiModel>> {
         ganheBackuplist.clear()
         viewModelScope.launch(exeeAb + Dispatchers.IO) {
-            val response = apidataServices.mainGanhe()
+            val response = apidataServices.backupGanhe()
             for (datam in response.body()!!) {
                 if (datam.status == "Advantage Portuguese") {
                     ganheBackuplist.add(datam)
@@ -175,7 +175,7 @@ class GanheViewModel : ViewModel() {
     fun funDisadvanceBp(): MutableLiveData<List<ApiModel>> {
         ganheBackuplist.clear()
         viewModelScope.launch(exeeDb + Dispatchers.IO) {
-            val response = apidataServices.mainGanhe()
+            val response = apidataServices.backupGanhe()
             for (datam in response.body()!!) {
                 if (datam.status == "Disadvantage Portuguese") {
                     ganheBackuplist.add(datam)
